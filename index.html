@@ -1,0 +1,1698 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rama Teuku Ardiansyah - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        
+        /* Universal Cloud Background System */
+        .cloud-bg {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cloud-bg-hero {
+            background: linear-gradient(135deg, #87CEEB 0%, #98D8E8 30%, #B0E0E6 70%, #E0F6FF 100%);
+        }
+        
+        .cloud-bg-about {
+            background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 30%, #BAE6FD 70%, #7DD3FC 100%);
+        }
+        
+        .cloud-bg-portfolio {
+            background: linear-gradient(135deg, #FDF4FF 0%, #FAE8FF 30%, #F3E8FF 70%, #E9D5FF 100%);
+        }
+        
+        .cloud-bg-contact {
+            background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 30%, #BBF7D0 70%, #86EFAC 100%);
+        }
+        
+        .cloud-bg-footer {
+            background: linear-gradient(135deg, #1E293B 0%, #334155 30%, #475569 70%, #64748B 100%);
+        }
+        
+        /* Enhanced Cloud Animations */
+        .cloud {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50px;
+            opacity: 0.8;
+            animation: float 20s infinite linear;
+            filter: blur(0.5px);
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
+        }
+        
+        .cloud::before,
+        .cloud::after {
+            content: '';
+            position: absolute;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50px;
+            filter: blur(0.3px);
+        }
+        
+        /* Multiple Cloud Variations */
+        .cloud-1 {
+            width: 120px;
+            height: 50px;
+            top: 15%;
+            left: -120px;
+            animation-duration: 30s;
+            animation-delay: 0s;
+        }
+        
+        .cloud-1::before {
+            width: 60px;
+            height: 60px;
+            top: -30px;
+            left: 15px;
+        }
+        
+        .cloud-1::after {
+            width: 70px;
+            height: 50px;
+            top: -20px;
+            right: 15px;
+        }
+        
+        .cloud-2 {
+            width: 100px;
+            height: 40px;
+            top: 35%;
+            left: -100px;
+            animation-duration: 35s;
+            animation-delay: -8s;
+        }
+        
+        .cloud-2::before {
+            width: 50px;
+            height: 50px;
+            top: -25px;
+            left: 20px;
+        }
+        
+        .cloud-2::after {
+            width: 60px;
+            height: 40px;
+            top: -15px;
+            right: 20px;
+        }
+        
+        .cloud-3 {
+            width: 140px;
+            height: 60px;
+            top: 55%;
+            left: -140px;
+            animation-duration: 40s;
+            animation-delay: -15s;
+        }
+        
+        .cloud-3::before {
+            width: 70px;
+            height: 70px;
+            top: -35px;
+            left: 25px;
+        }
+        
+        .cloud-3::after {
+            width: 80px;
+            height: 60px;
+            top: -25px;
+            right: 25px;
+        }
+        
+        .cloud-4 {
+            width: 110px;
+            height: 45px;
+            top: 75%;
+            left: -110px;
+            animation-duration: 32s;
+            animation-delay: -22s;
+        }
+        
+        .cloud-4::before {
+            width: 55px;
+            height: 55px;
+            top: -27px;
+            left: 18px;
+        }
+        
+        .cloud-4::after {
+            width: 65px;
+            height: 45px;
+            top: -17px;
+            right: 18px;
+        }
+        
+        .cloud-5 {
+            width: 90px;
+            height: 35px;
+            top: 8%;
+            left: -90px;
+            animation-duration: 28s;
+            animation-delay: -30s;
+        }
+        
+        .cloud-5::before {
+            width: 45px;
+            height: 45px;
+            top: -22px;
+            left: 12px;
+        }
+        
+        .cloud-5::after {
+            width: 55px;
+            height: 35px;
+            top: -12px;
+            right: 12px;
+        }
+        
+        .cloud-6 {
+            width: 130px;
+            height: 55px;
+            top: 45%;
+            left: -130px;
+            animation-duration: 38s;
+            animation-delay: -5s;
+        }
+        
+        .cloud-6::before {
+            width: 65px;
+            height: 65px;
+            top: -32px;
+            left: 22px;
+        }
+        
+        .cloud-6::after {
+            width: 75px;
+            height: 55px;
+            top: -22px;
+            right: 22px;
+        }
+        
+        .cloud-7 {
+            width: 85px;
+            height: 32px;
+            top: 65%;
+            left: -85px;
+            animation-duration: 26s;
+            animation-delay: -12s;
+        }
+        
+        .cloud-7::before {
+            width: 42px;
+            height: 42px;
+            top: -20px;
+            left: 14px;
+        }
+        
+        .cloud-7::after {
+            width: 52px;
+            height: 32px;
+            top: -10px;
+            right: 14px;
+        }
+        
+        .cloud-8 {
+            width: 105px;
+            height: 42px;
+            top: 25%;
+            left: -105px;
+            animation-duration: 34s;
+            animation-delay: -18s;
+        }
+        
+        .cloud-8::before {
+            width: 52px;
+            height: 52px;
+            top: -26px;
+            left: 16px;
+        }
+        
+        .cloud-8::after {
+            width: 62px;
+            height: 42px;
+            top: -16px;
+            right: 16px;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateX(-150px);
+            }
+            100% {
+                transform: translateX(calc(100vw + 150px));
+            }
+        }
+        
+        /* Floating Animation for Elements */
+        @keyframes floatUp {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        .float-element {
+            animation: floatUp 3s ease-in-out infinite;
+        }
+        
+        /* Enhanced Glass Effects */
+        .glass {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15), 
+                        0 4px 12px rgba(255, 255, 255, 0.2) inset;
+        }
+        
+        .glass-dark {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12),
+                        0 2px 8px rgba(255, 255, 255, 0.3) inset;
+        }
+        
+        /* Enhanced Hover Effects */
+        .hover-lift {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2),
+                        0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hover-3d {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .hover-3d:hover {
+            transform: translateY(-6px) rotateX(5deg) rotateY(5deg);
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2),
+                        0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Simple Animations */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 0.6s ease forwards;
+        }
+        
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        
+        .slide-up {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideUp 0.6s ease forwards;
+        }
+        
+        @keyframes slideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Simple Gradient Text */
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+        }
+        
+        /* Simple Delays */
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        
+        /* Clean Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        
+        /* Enhanced Navigation */
+        .nav-blur {
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1),
+                        0 1px 4px rgba(255, 255, 255, 0.3) inset;
+        }
+        
+        /* Enhanced Card Effects */
+        .skill-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transform: rotate(45deg);
+            transition: all 0.6s;
+            opacity: 0;
+        }
+        
+        .skill-card:hover::before {
+            animation: shimmer 1.5s ease-in-out;
+        }
+        
+        .portfolio-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .portfolio-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s;
+        }
+        
+        .portfolio-card:hover::after {
+            left: 100%;
+        }
+        
+        @keyframes shimmer {
+            0% {
+                transform: translateX(-100%) translateY(-100%) rotate(45deg);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(100%) translateY(100%) rotate(45deg);
+                opacity: 0;
+            }
+        }
+        
+        /* Sparkle Animation */
+        @keyframes sparkle {
+            0%, 100% {
+                opacity: 0;
+                transform: scale(0);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        .sparkle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: radial-gradient(circle, #fff, transparent);
+            border-radius: 50%;
+            animation: sparkle 2s infinite;
+        }
+        
+        .sparkle:nth-child(1) { top: 20%; left: 20%; animation-delay: 0s; }
+        .sparkle:nth-child(2) { top: 80%; left: 80%; animation-delay: 0.5s; }
+        .sparkle:nth-child(3) { top: 60%; left: 30%; animation-delay: 1s; }
+        .sparkle:nth-child(4) { top: 30%; left: 70%; animation-delay: 1.5s; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 nav-blur border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold gradient-text">Rama Teuku Ardiansyah</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-gray-900 transition-all duration-300">Beranda</a>
+                    <a href="#about" class="text-gray-600 hover:text-gray-900 transition-all duration-300">Tentang</a>
+                    <a href="#portfolio" class="text-gray-600 hover:text-gray-900 transition-all duration-300">Portfolio</a>
+                    <a href="#contact" class="text-gray-600 hover:text-gray-900 transition-all duration-300">Kontak</a>
+                    <button onclick="showAdminLogin()" class="text-blue-600 hover:text-blue-700 transition-all duration-300">
+                        <i class="fas fa-cog"></i> Admin
+                    </button>
+                </div>
+                <button class="md:hidden text-gray-800" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden glass-dark border-t border-gray-200">
+            <div class="px-4 py-2 space-y-2">
+                <a href="#home" class="block py-2 text-gray-600 hover:text-gray-900 transition">Beranda</a>
+                <a href="#about" class="block py-2 text-gray-600 hover:text-gray-900 transition">Tentang</a>
+                <a href="#portfolio" class="block py-2 text-gray-600 hover:text-gray-900 transition">Portfolio</a>
+                <a href="#contact" class="block py-2 text-gray-600 hover:text-gray-900 transition">Kontak</a>
+                <button onclick="showAdminLogin()" class="block py-2 text-blue-600">Admin</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center cloud-bg cloud-bg-hero pt-24">
+        <!-- Enhanced Moving Clouds -->
+        <div class="cloud cloud-1"></div>
+        <div class="cloud cloud-2"></div>
+        <div class="cloud cloud-3"></div>
+        <div class="cloud cloud-4"></div>
+        <div class="cloud cloud-5"></div>
+        <div class="cloud cloud-6"></div>
+        <div class="cloud cloud-7"></div>
+        <div class="cloud cloud-8"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 text-center relative z-10">
+            <!-- Sparkle Effects -->
+            <div class="sparkle"></div>
+            <div class="sparkle"></div>
+            <div class="sparkle"></div>
+            <div class="sparkle"></div>
+            
+            <div class="mb-8 mt-8">
+                <div id="heroProfileImage" class="w-48 h-48 mx-auto mb-12 rounded-full overflow-hidden glass hover-3d fade-in relative float-element border-4 border-white/30 shadow-2xl">
+                    <i class="fas fa-user text-8xl text-gray-400 flex items-center justify-center h-full"></i>
+                </div>
+                
+                <h1 id="heroName" class="text-4xl md:text-6xl font-bold mb-8 gradient-text float-element">
+                    Rama Teuku Ardiansyah
+                </h1>
+                
+                <p id="heroTitle" class="text-2xl md:text-3xl mb-10 text-gray-700 font-medium slide-up delay-1 float-element">
+                    Web Developer & UI/UX Designer
+                </p>
+                
+                <p id="heroDescription" class="text-lg md:text-xl mb-16 text-gray-700 max-w-3xl mx-auto slide-up delay-2 leading-relaxed float-element">
+                    Passionate about creating beautiful and functional digital experiences that inspire and engage users
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center slide-up delay-3">
+                    <a href="https://drive.google.com/file/d/1ZjQQ1VM-f6dNI8PwXx38HiEH3zRNtfuQ/view?usp=drive_link" 
+                       target="_blank" 
+                       class="glass px-8 py-4 rounded-full font-semibold text-lg hover-lift group">
+                        <i class="fab fa-google-drive mr-3 text-xl text-blue-600"></i>
+                        Portfolio Drive
+                    </a>
+                    <a href="#contact" 
+                       class="gradient-bg text-white px-8 py-4 rounded-full font-semibold text-lg hover-lift">
+                        <i class="fas fa-envelope mr-3"></i>
+                        Hubungi Saya
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 cloud-bg cloud-bg-about">
+        <!-- Enhanced clouds for about section -->
+        <div class="cloud cloud-1" style="animation-duration: 42s; top: 12%; animation-delay: -5s;"></div>
+        <div class="cloud cloud-2" style="animation-duration: 38s; top: 28%; animation-delay: -15s;"></div>
+        <div class="cloud cloud-3" style="animation-duration: 45s; top: 45%; animation-delay: -25s;"></div>
+        <div class="cloud cloud-4" style="animation-duration: 40s; top: 62%; animation-delay: -10s;"></div>
+        <div class="cloud cloud-5" style="animation-duration: 36s; top: 78%; animation-delay: -20s;"></div>
+        <div class="cloud cloud-6" style="animation-duration: 44s; top: 85%; animation-delay: -30s;"></div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 gradient-text fade-in">Tentang Saya</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full fade-in delay-1"></div>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="slide-up delay-2">
+                    <div class="glass p-8 rounded-2xl hover-lift">
+                        <h3 id="aboutTitle" class="text-2xl font-bold mb-6 gradient-text">Creative Professional</h3>
+                        <p id="aboutDescription" class="text-gray-600 mb-8 text-lg leading-relaxed">
+                            Saya adalah seorang web developer dan UI/UX designer dengan pengalaman lebih dari 3 tahun dalam menciptakan solusi digital yang inovatif. Saya memiliki passion yang besar dalam mengembangkan aplikasi web yang tidak hanya fungsional, tetapi juga memberikan pengalaman pengguna yang luar biasa.
+                        </p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="glass-dark p-4 rounded-xl">
+                                <h4 class="font-semibold text-blue-600 mb-2">Email:</h4>
+                                <p id="aboutEmail" class="text-gray-700">rama.ardiansyah@email.com</p>
+                            </div>
+                            <div class="glass-dark p-4 rounded-xl">
+                                <h4 class="font-semibold text-purple-600 mb-2">Lokasi:</h4>
+                                <p id="aboutLocation" class="text-gray-700">Jakarta, Indonesia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-6">
+                    <div id="skillsContainer">
+                        <div class="glass p-6 rounded-2xl text-center skill-card hover-lift fade-in delay-1">
+                            <i class="fas fa-code text-4xl text-blue-500 mb-4"></i>
+                            <h4 class="font-semibold text-gray-800 mb-2">Frontend</h4>
+                            <p class="text-gray-700 text-sm">React, Vue, HTML/CSS</p>
+                        </div>
+                        <div class="glass p-6 rounded-2xl text-center skill-card hover-lift fade-in delay-2">
+                            <i class="fas fa-server text-4xl text-purple-500 mb-4"></i>
+                            <h4 class="font-semibold text-gray-800 mb-2">Backend</h4>
+                            <p class="text-gray-700 text-sm">Node.js, PHP, Python</p>
+                        </div>
+                        <div class="glass p-6 rounded-2xl text-center skill-card hover-lift fade-in delay-3">
+                            <i class="fas fa-paint-brush text-4xl text-pink-500 mb-4"></i>
+                            <h4 class="font-semibold text-gray-800 mb-2">Design</h4>
+                            <p class="text-gray-700 text-sm">Figma, Adobe XD</p>
+                        </div>
+                        <div class="glass p-6 rounded-2xl text-center skill-card hover-lift fade-in delay-1">
+                            <i class="fas fa-mobile-alt text-4xl text-green-500 mb-4"></i>
+                            <h4 class="font-semibold text-gray-800 mb-2">Mobile</h4>
+                            <p class="text-gray-700 text-sm">React Native, Flutter</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 cloud-bg cloud-bg-portfolio">
+        <!-- Enhanced portfolio clouds -->
+        <div class="cloud cloud-1" style="animation-duration: 48s; top: 8%; animation-delay: -12s;"></div>
+        <div class="cloud cloud-2" style="animation-duration: 52s; top: 22%; animation-delay: -8s;"></div>
+        <div class="cloud cloud-3" style="animation-duration: 46s; top: 38%; animation-delay: -28s;"></div>
+        <div class="cloud cloud-4" style="animation-duration: 44s; top: 54%; animation-delay: -18s;"></div>
+        <div class="cloud cloud-5" style="animation-duration: 50s; top: 68%; animation-delay: -35s;"></div>
+        <div class="cloud cloud-6" style="animation-duration: 42s; top: 82%; animation-delay: -5s;"></div>
+        <div class="cloud cloud-7" style="animation-duration: 38s; top: 15%; animation-delay: -22s;"></div>
+        <div class="cloud cloud-8" style="animation-duration: 40s; top: 75%; animation-delay: -15s;"></div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 gradient-text fade-in">Portfolio</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full fade-in delay-1"></div>
+                <p class="text-gray-600 text-lg mt-8 slide-up delay-2">Beberapa karya terbaik yang telah saya ciptakan</p>
+            </div>
+            
+            <div id="portfolioContainer" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Portfolio items will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 cloud-bg cloud-bg-contact">
+        <!-- Enhanced contact clouds -->
+        <div class="cloud cloud-1" style="animation-duration: 46s; top: 18%; animation-delay: -8s;"></div>
+        <div class="cloud cloud-2" style="animation-duration: 50s; top: 32%; animation-delay: -25s;"></div>
+        <div class="cloud cloud-3" style="animation-duration: 44s; top: 48%; animation-delay: -12s;"></div>
+        <div class="cloud cloud-4" style="animation-duration: 48s; top: 64%; animation-delay: -30s;"></div>
+        <div class="cloud cloud-5" style="animation-duration: 42s; top: 78%; animation-delay: -18s;"></div>
+        <div class="cloud cloud-6" style="animation-duration: 52s; top: 25%; animation-delay: -35s;"></div>
+        <div class="cloud cloud-7" style="animation-duration: 40s; top: 85%; animation-delay: -5s;"></div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 gradient-text fade-in">Hubungi Saya</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full fade-in delay-1"></div>
+                <p class="text-gray-600 text-lg mt-8 slide-up delay-2">Mari berkolaborasi untuk menciptakan sesuatu yang luar biasa</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div class="slide-up delay-3">
+                    <div class="glass p-8 rounded-2xl hover-lift">
+                        <h3 class="text-2xl font-bold mb-8 gradient-text">Mari Berkolaborasi</h3>
+                        <p class="text-gray-600 mb-8 text-lg">
+                            Saya selalu terbuka untuk proyek baru dan kolaborasi menarik. Jangan ragu untuk menghubungi saya!
+                        </p>
+                        
+                        <div id="contactInfo" class="space-y-6 mb-8">
+                            <div class="flex items-center glass-dark p-4 rounded-xl hover-lift">
+                                <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-envelope text-white"></i>
+                                </div>
+                                <span class="text-gray-700">rama.ardiansyah@email.com</span>
+                            </div>
+                            <div class="flex items-center glass-dark p-4 rounded-xl hover-lift">
+                                <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-phone text-white"></i>
+                                </div>
+                                <span class="text-gray-700">+62 812-3456-7890</span>
+                            </div>
+                            <div class="flex items-center glass-dark p-4 rounded-xl hover-lift">
+                                <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-map-marker-alt text-white"></i>
+                                </div>
+                                <span class="text-gray-700">Jakarta, Indonesia</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center hover-lift">
+                                <i class="fab fa-linkedin text-white"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover-lift">
+                                <i class="fab fa-github text-white"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-pink-600 rounded-full flex items-center justify-center hover-lift">
+                                <i class="fab fa-instagram text-white"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slide-up delay-1">
+                    <div class="glass p-8 rounded-2xl hover-lift">
+                        <form class="space-y-6">
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-3">Nama</label>
+                                <input type="text" class="w-full px-4 py-3 glass-dark rounded-xl border border-gray-200 focus:border-blue-400 focus:outline-none transition-all text-gray-800 placeholder-gray-500" placeholder="Masukkan nama Anda">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-3">Email</label>
+                                <input type="email" class="w-full px-4 py-3 glass-dark rounded-xl border border-gray-200 focus:border-blue-400 focus:outline-none transition-all text-gray-800 placeholder-gray-500" placeholder="Masukkan email Anda">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-3">Pesan</label>
+                                <textarea rows="5" class="w-full px-4 py-3 glass-dark rounded-xl border border-gray-200 focus:border-blue-400 focus:outline-none transition-all text-gray-800 placeholder-gray-500 resize-none" placeholder="Tulis pesan Anda di sini..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full gradient-bg text-white py-4 rounded-xl font-semibold text-lg hover-lift transition-all">
+                                <i class="fas fa-paper-plane mr-3"></i>
+                                Kirim Pesan
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="cloud-bg cloud-bg-footer text-white py-12 border-t border-gray-600 relative">
+        <!-- Footer clouds -->
+        <div class="cloud cloud-1" style="animation-duration: 60s; top: 20%; animation-delay: -40s; opacity: 0.3;"></div>
+        <div class="cloud cloud-3" style="animation-duration: 55s; top: 60%; animation-delay: -25s; opacity: 0.3;"></div>
+        <div class="cloud cloud-5" style="animation-duration: 50s; top: 80%; animation-delay: -10s; opacity: 0.3;"></div>
+        <div class="max-w-7xl mx-auto px-4 text-center relative z-10">
+            <p class="text-lg text-gray-200">&copy; 2024 Rama Teuku Ardiansyah. All rights reserved.</p>
+            <p class="mt-2 text-sm text-gray-300">Crafted with ❤️ and lots of ☕</p>
+        </div>
+    </footer>
+
+    <!-- Admin Login Modal -->
+    <div id="adminLoginModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm hidden z-50 flex items-center justify-center">
+        <div class="glass p-8 rounded-3xl max-w-md w-full mx-4 scale-in">
+            <h3 class="text-3xl font-bold mb-8 text-center gradient-text">Admin Login</h3>
+            <form onsubmit="adminLogin(event)">
+                <div class="mb-6">
+                    <label class="block text-black font-bold mb-3">Username</label>
+                    <input type="text" id="adminUsername" class="w-full px-6 py-4 glass-dark rounded-xl border border-white/20 focus:border-purple-400 focus:outline-none transition-all text-black" required>
+                </div>
+                <div class="mb-8">
+                    <label class="block text-black font-bold mb-3">Password</label>
+                    <input type="password" id="adminPassword" class="w-full px-6 py-4 glass-dark rounded-xl border border-white/20 focus:border-purple-400 focus:outline-none transition-all text-black" required>
+                </div>
+                <div class="flex space-x-4">
+                    <button type="submit" class="flex-1 bg-gradient-to-r from-purple-600 to-blue-600 text-black py-4 rounded-xl font-bold hover-lift">
+                        Login
+                    </button>
+                    <button type="button" onclick="hideAdminLogin()" class="flex-1 glass-dark text-black py-4 rounded-xl font-bold hover-lift">
+                        Batal
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Panel -->
+    <div id="adminPanel" class="fixed inset-0 bg-gray-900 hidden z-50 overflow-y-auto">
+        <div class="bg-gradient-to-r from-purple-800 to-blue-800 text-white p-6 border-b border-white/10">
+            <div class="flex justify-between items-center">
+                <h2 class="text-3xl font-bold">Admin Panel</h2>
+                <div>
+                    <button onclick="adminLogout()" class="text-white hover:text-red-400 text-3xl transition-all">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="p-6">
+            <!-- Admin Navigation -->
+            <div class="mb-8">
+                <div class="flex space-x-4 border-b border-white/10">
+                    <button onclick="showAdminSection('profile')" class="admin-tab px-6 py-3 font-bold text-purple-400 border-b-2 border-purple-400 bg-purple-500/10 rounded-t-xl">
+                        <i class="fas fa-user mr-2"></i>Profil
+                    </button>
+                    <button onclick="showAdminSection('portfolio')" class="admin-tab px-6 py-3 font-bold text-blue-400 hover:text-blue-300 hover:bg-blue-500/10 rounded-t-xl transition-all">
+                        <i class="fas fa-briefcase mr-2"></i>Portfolio
+                    </button>
+                    <button onclick="showAdminSection('skills')" class="admin-tab px-6 py-3 font-bold text-green-400 hover:text-green-300 hover:bg-green-500/10 rounded-t-xl transition-all">
+                        <i class="fas fa-code mr-2"></i>Skills
+                    </button>
+                    <button onclick="showAdminSection('contact')" class="admin-tab px-6 py-3 font-bold text-pink-400 hover:text-pink-300 hover:bg-pink-500/10 rounded-t-xl transition-all">
+                        <i class="fas fa-envelope mr-2"></i>Kontak
+                    </button>
+                </div>
+            </div>
+
+            <!-- Profile Section -->
+            <div id="adminProfile" class="admin-section">
+                <h3 class="text-2xl font-bold mb-8 gradient-text">Edit Profil</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-black font-bold mb-3">Nama Lengkap</label>
+                        <input type="text" id="editName" class="w-full px-4 py-3 glass-dark rounded-xl border border-white/20 focus:border-purple-400 focus:outline-none text-black">
+                    </div>
+                    <div>
+                        <label class="block text-black font-bold mb-3">Profesi</label>
+                        <input type="text" id="editTitle" class="w-full px-4 py-3 glass-dark rounded-xl border border-white/20 focus:border-purple-400 focus:outline-none text-black">
+                    </div>
+                    <div class="md:col-span-2">
+                        <label class="block text-black font-bold mb-3">Deskripsi Hero</label>
+                        <textarea id="editHeroDescription" rows="3" class="w-full px-4 py-3 glass-dark rounded-xl border border-white/20 focus:border-purple-400 focus:outline-none text-black"></textarea>
+                    </div>
+                    <div>
+                        <label class="block text-black font-bold mb-3">Judul About</label>
+                        <input type="text" id="editAboutTitle" class="w-full px-4 py-3 glass-dark rounded-xl border border-white/20 focus:border-purple-400 focus:outline-none text-black">
+                    </div>
+                    <div>
+                        <label class="block text-black font-bold mb-3">Email</label>
+                        <input type="email" id="editEmail" class="w-full px-4 py-3 glass-dark rounded-xl border border-white/20 focus:border-purple-400 focus:outline-none text-black">
+                    </div>
+                    <div class="md:col-span-2">
+                        <label class="block text-black font-bold mb-3">Deskripsi About</label>
+                        <textarea id="editAboutDescription" rows="4" class="w-full px-4 py-3 glass-dark rounded-xl border border-white/20 focus:border-purple-400 focus:outline-none text-black"></textarea>
+                    </div>
+                    <div>
+                        <label class="block text-black font-bold mb-3">Lokasi</label>
+                        <input type="text" id="editLocation" class="w-full px-4 py-3 glass-dark rounded-xl border border-white/20 focus:border-purple-400 focus:outline-none text-black">
+                    </div>
+                    <div>
+                        <label class="block text-black font-bold mb-3">Link Portfolio Drive</label>
+                        <input type="url" id="editPortfolioDrive" class="w-full px-4 py-3 glass-dark rounded-xl border border-white/20 focus:border-purple-400 focus:outline-none text-black">
+                    </div>
+                    <div class="md:col-span-2">
+                        <label class="block text-black font-bold mb-3">Foto Profil</label>
+                        <div class="flex items-center space-x-4">
+                            <div id="profileImagePreview" class="w-20 h-20 glass rounded-full flex items-center justify-center overflow-hidden border-2 border-white/20">
+                                <i class="fas fa-user text-2xl text-white/60"></i>
+                            </div>
+                            <div class="flex-1">
+                                <input type="file" id="profileImageInput" accept="image/*" class="hidden" onchange="previewProfileImage(this)">
+                                <button type="button" onclick="document.getElementById('profileImageInput').click()" class="glass px-4 py-2 rounded-xl text-black hover-lift mr-2">
+                                    Pilih Foto
+                                </button>
+                                <button type="button" onclick="removeProfileImage()" class="bg-red-600 text-white px-4 py-2 rounded-xl hover:bg-red-700 transition">
+                                    Hapus Foto
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="saveProfile()" class="mt-8 bg-gradient-to-r from-purple-600 to-blue-600 text-black px-8 py-4 rounded-xl font-bold hover-lift">
+                    Simpan Profil
+                </button>
+            </div>
+
+            <!-- Portfolio Section -->
+            <div id="adminPortfolio" class="admin-section hidden">
+                <div class="flex justify-between items-center mb-8">
+                    <h3 class="text-2xl font-bold gradient-text">Kelola Portfolio</h3>
+                    <button onclick="showAddPortfolio()" class="bg-gradient-to-r from-green-600 to-green-700 text-white px-6 py-3 rounded-xl font-bold hover-lift">
+                        <i class="fas fa-plus mr-2"></i>Tambah Project
+                    </button>
+                </div>
+                <div id="portfolioList" class="space-y-4">
+                    <!-- Portfolio items will be loaded here -->
+                </div>
+            </div>
+
+            <!-- Skills Section -->
+            <div id="adminSkills" class="admin-section hidden">
+                <div class="flex justify-between items-center mb-8">
+                    <h3 class="text-2xl font-bold gradient-text">Kelola Skills</h3>
+                    <button onclick="showAddSkill()" class="bg-gradient-to-r from-green-600 to-green-700 text-white px-6 py-3 rounded-xl font-bold hover-lift">
+                        <i class="fas fa-plus mr-2"></i>Tambah Skill
+                    </button>
+                </div>
+                <div id="skillsList" class="grid md:grid-cols-2 gap-4">
+                    <!-- Skills will be loaded here -->
+                </div>
+            </div>
+
+            <!-- Contact Section -->
+            <div id="adminContact" class="admin-section hidden">
+                <h3 class="text-2xl font-bold mb-8 gradient-text">Edit Informasi Kontak</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-black font-bold mb-3">Email Kontak</label>
+                        <input type="email" id="editContactEmail" class="w-full px-4 py-3 glass-dark rounded-xl border border-white/20 focus:border-purple-400 focus:outline-none text-black">
+                    </div>
+                    <div>
+                        <label class="block text-black font-bold mb-3">Nomor Telepon</label>
+                        <input type="text" id="editContactPhone" class="w-full px-4 py-3 glass-dark rounded-xl border border-white/20 focus:border-purple-400 focus:outline-none text-black">
+                    </div>
+                    <div>
+                        <label class="block text-black font-bold mb-3">Alamat</label>
+                        <input type="text" id="editContactAddress" class="w-full px-4 py-3 glass-dark rounded-xl border border-white/20 focus:border-purple-400 focus:outline-none text-black">
+                    </div>
+                    <div>
+                        <label class="block text-black font-bold mb-3">LinkedIn URL</label>
+                        <input type="url" id="editLinkedin" class="w-full px-4 py-3 glass-dark rounded-xl border border-white/20 focus:border-purple-400 focus:outline-none text-black">
+                    </div>
+                    <div>
+                        <label class="block text-black font-bold mb-3">GitHub URL</label>
+                        <input type="url" id="editGithub" class="w-full px-4 py-3 glass-dark rounded-xl border border-white/20 focus:border-purple-400 focus:outline-none text-black">
+                    </div>
+                    <div>
+                        <label class="block text-black font-bold mb-3">Instagram URL</label>
+                        <input type="url" id="editInstagram" class="w-full px-4 py-3 glass-dark rounded-xl border border-white/20 focus:border-purple-400 focus:outline-none text-black">
+                    </div>
+                </div>
+                <button onclick="saveContact()" class="mt-8 bg-gradient-to-r from-purple-600 to-blue-600 text-black px-8 py-4 rounded-xl font-bold hover-lift">
+                    Simpan Kontak
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add/Edit Portfolio Modal -->
+    <div id="portfolioModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm hidden z-50 flex items-center justify-center">
+        <div class="glass p-8 rounded-3xl max-w-2xl w-full mx-4 max-h-screen overflow-y-auto">
+            <h3 id="portfolioModalTitle" class="text-3xl font-bold mb-8 gradient-text">Tambah Project</h3>
+            <form onsubmit="savePortfolioItem(event)">
+                <input type="hidden" id="portfolioId">
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block text-black font-bold mb-3">Nama Project</label>
+                        <input type="text" id="portfolioName" class="w-full px-4 py-3 glass-dark rounded-xl border border-white/20 focus:border-purple-400 focus:outline-none text-black" required>
+                    </div>
+                    <div>
+                        <label class="block text-black font-bold mb-3">Kategori</label>
+                        <input type="text" id="portfolioCategory" class="w-full px-4 py-3 glass-dark rounded-xl border border-white/20 focus:border-purple-400 focus:outline-none text-black" required>
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-black font-bold mb-3">Deskripsi</label>
+                    <textarea id="portfolioDescription" rows="3" class="w-full px-4 py-3 glass-dark rounded-xl border border-white/20 focus:border-purple-400 focus:outline-none text-black" required></textarea>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-black font-bold mb-3">URL Project (opsional)</label>
+                    <input type="url" id="portfolioUrl" class="w-full px-4 py-3 glass-dark rounded-xl border border-white/20 focus:border-purple-400 focus:outline-none text-black">
+                </div>
+                <div class="mb-8">
+                    <label class="block text-black font-bold mb-3">Gambar Project</label>
+                    <div class="flex items-center space-x-4">
+                        <div id="portfolioImagePreview" class="w-24 h-24 glass rounded-xl flex items-center justify-center overflow-hidden">
+                            <i class="fas fa-image text-2xl text-white/60"></i>
+                        </div>
+                        <div class="flex-1">
+                            <input type="file" id="portfolioImageInput" accept="image/*" class="hidden" onchange="previewPortfolioImage(this)">
+                            <button type="button" onclick="document.getElementById('portfolioImageInput').click()" class="glass px-4 py-2 rounded-xl text-black hover-lift mr-2">
+                                Pilih Gambar
+                            </button>
+                            <button type="button" onclick="removePortfolioImage()" class="bg-red-600 text-white px-4 py-2 rounded-xl hover:bg-red-700 transition">
+                                Hapus Gambar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex space-x-4">
+                    <button type="submit" class="flex-1 bg-gradient-to-r from-purple-600 to-blue-600 text-black py-4 rounded-xl font-bold hover-lift">
+                        Simpan
+                    </button>
+                    <button type="button" onclick="hidePortfolioModal()" class="flex-1 glass-dark text-black py-4 rounded-xl font-bold hover-lift">
+                        Batal
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Add/Edit Skill Modal -->
+    <div id="skillModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm hidden z-50 flex items-center justify-center">
+        <div class="glass p-8 rounded-3xl max-w-md w-full mx-4">
+            <h3 id="skillModalTitle" class="text-3xl font-bold mb-8 gradient-text">Tambah Skill</h3>
+            <form onsubmit="saveSkill(event)">
+                <input type="hidden" id="skillId">
+                <div class="mb-6">
+                    <label class="block text-black font-bold mb-3">Nama Skill</label>
+                    <input type="text" id="skillName" class="w-full px-4 py-3 glass-dark rounded-xl border border-white/20 focus:border-purple-400 focus:outline-none text-black" required>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-black font-bold mb-3">Deskripsi</label>
+                    <input type="text" id="skillDescription" class="w-full px-4 py-3 glass-dark rounded-xl border border-white/20 focus:border-purple-400 focus:outline-none text-black" required>
+                </div>
+                <div class="mb-8">
+                    <label class="block text-black font-bold mb-3">Icon (Font Awesome class)</label>
+                    <input type="text" id="skillIcon" class="w-full px-4 py-3 glass-dark rounded-xl border border-white/20 focus:border-purple-400 focus:outline-none text-black" placeholder="fas fa-code" required>
+                </div>
+                <div class="flex space-x-4">
+                    <button type="submit" class="flex-1 bg-gradient-to-r from-purple-600 to-blue-600 text-black py-4 rounded-xl font-bold hover-lift">
+                        Simpan
+                    </button>
+                    <button type="button" onclick="hideSkillModal()" class="flex-1 glass-dark text-black py-4 rounded-xl font-bold hover-lift">
+                        Batal
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Simple initialization
+        function initializeWebsite() {
+            // Simple website initialization
+            console.log('Website initialized');
+        }
+
+        // Default data - will be overridden by stored data
+        let portfolioData = [
+            {
+                id: 1,
+                name: "E-Commerce Website",
+                category: "Web Development",
+                description: "Platform e-commerce modern dengan fitur lengkap dan desain responsif yang memukau",
+                url: "https://example.com",
+                image: ""
+            },
+            {
+                id: 2,
+                name: "Mobile Banking App",
+                category: "Mobile App",
+                description: "Aplikasi mobile banking dengan UI/UX yang intuitif, aman, dan user-friendly",
+                url: "",
+                image: ""
+            },
+            {
+                id: 3,
+                name: "Corporate Dashboard",
+                category: "Dashboard",
+                description: "Dashboard analytics untuk perusahaan dengan visualisasi data yang menarik dan interaktif",
+                url: "https://example.com",
+                image: ""
+            },
+            {
+                id: 4,
+                name: "Restaurant Website",
+                category: "Web Development",
+                description: "Website restoran dengan sistem reservasi online dan menu digital yang elegan",
+                url: "",
+                image: ""
+            },
+            {
+                id: 5,
+                name: "Learning Management System",
+                category: "Web Application", 
+                description: "Platform pembelajaran online dengan fitur video streaming dan tracking progress siswa",
+                url: "https://example.com",
+                image: ""
+            },
+            {
+                id: 6,
+                name: "Portfolio Website",
+                category: "Web Design",
+                description: "Website portfolio kreatif untuk fotografer dengan galeri interaktif dan animasi smooth",
+                url: "",
+                image: ""
+            }
+        ];
+
+        let skillsData = [
+            { id: 1, name: "Frontend", description: "React, Vue, HTML/CSS", icon: "fas fa-code" },
+            { id: 2, name: "Backend", description: "Node.js, PHP, Python", icon: "fas fa-server" },
+            { id: 3, name: "Design", description: "Figma, Adobe XD", icon: "fas fa-paint-brush" },
+            { id: 4, name: "Mobile", description: "React Native, Flutter", icon: "fas fa-mobile-alt" }
+        ];
+
+        let profileData = {
+            name: "Rama Teuku Ardiansyah",
+            title: "Web Developer & UI/UX Designer",
+            heroDescription: "Passionate about creating beautiful and functional digital experiences that inspire and engage users",
+            aboutTitle: "Creative Professional",
+            aboutDescription: "Saya adalah seorang web developer dan UI/UX designer dengan pengalaman lebih dari 3 tahun dalam menciptakan solusi digital yang inovatif. Saya memiliki passion yang besar dalam mengembangkan aplikasi web yang tidak hanya fungsional, tetapi juga memberikan pengalaman pengguna yang luar biasa.",
+            email: "rama.ardiansyah@email.com",
+            location: "Jakarta, Indonesia",
+            profileImage: "",
+            portfolioDrive: "https://drive.google.com/file/d/1ZjQQ1VM-f6dNI8PwXx38HiEH3zRNtfuQ/view?usp=drive_link"
+        };
+
+        let contactData = {
+            email: "rama.ardiansyah@email.com",
+            phone: "+62 812-3456-7890",
+            address: "Jakarta, Indonesia",
+            linkedin: "#",
+            github: "#",
+            instagram: "#"
+        };
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load stored data first, then display everything
+            loadStoredData();
+            
+            // Display all sections with loaded data
+            loadProfile();
+            loadPortfolio();
+            loadSkills();
+            loadContact();
+            
+            // Auto-save data periodically to ensure persistence
+            setInterval(function() {
+                saveAllDataToStorage();
+            }, 30000); // Save every 30 seconds
+        });
+
+        // Function to save all data to localStorage
+        function saveAllDataToStorage() {
+            try {
+                localStorage.setItem('profileData', JSON.stringify(profileData));
+                localStorage.setItem('portfolioData', JSON.stringify(portfolioData));
+                localStorage.setItem('skillsData', JSON.stringify(skillsData));
+                localStorage.setItem('contactData', JSON.stringify(contactData));
+                
+                if (profileData.profileImage) {
+                    localStorage.setItem('profileImage', profileData.profileImage);
+                }
+            } catch (e) {
+                console.log('Error saving data to localStorage');
+            }
+        }
+
+        function loadStoredData() {
+            // Load stored profile data first
+            const storedProfile = localStorage.getItem('profileData');
+            if (storedProfile) {
+                try {
+                    const parsedProfile = JSON.parse(storedProfile);
+                    profileData = { ...profileData, ...parsedProfile };
+                } catch (e) {
+                    console.log('Error loading stored profile data');
+                }
+            }
+
+            // Load stored profile image separately for backward compatibility
+            const storedImage = localStorage.getItem('profileImage');
+            if (storedImage && !profileData.profileImage) {
+                profileData.profileImage = storedImage;
+            }
+
+            // Load stored portfolio data - completely replace default data if exists
+            const storedPortfolio = localStorage.getItem('portfolioData');
+            if (storedPortfolio) {
+                try {
+                    const parsedPortfolio = JSON.parse(storedPortfolio);
+                    if (Array.isArray(parsedPortfolio) && parsedPortfolio.length > 0) {
+                        portfolioData = parsedPortfolio;
+                    }
+                } catch (e) {
+                    console.log('Error loading stored portfolio data');
+                }
+            }
+
+            // Load stored skills data - completely replace default data if exists
+            const storedSkills = localStorage.getItem('skillsData');
+            if (storedSkills) {
+                try {
+                    const parsedSkills = JSON.parse(storedSkills);
+                    if (Array.isArray(parsedSkills) && parsedSkills.length > 0) {
+                        skillsData = parsedSkills;
+                    }
+                } catch (e) {
+                    console.log('Error loading stored skills data');
+                }
+            }
+
+            // Load stored contact data
+            const storedContact = localStorage.getItem('contactData');
+            if (storedContact) {
+                try {
+                    const parsedContact = JSON.parse(storedContact);
+                    contactData = { ...contactData, ...parsedContact };
+                } catch (e) {
+                    console.log('Error loading stored contact data');
+                }
+            }
+        }
+
+        // Navigation functions
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Image handling functions
+        function previewProfileImage(input) {
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const imageData = e.target.result;
+                    const preview = document.getElementById('profileImagePreview');
+                    preview.innerHTML = `<img src="${imageData}" alt="Profile" class="w-full h-full object-cover rounded-full">`;
+                    
+                    profileData.profileImage = imageData;
+                    updateHeroProfileImage();
+                    localStorage.setItem('profileImage', imageData);
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        function removeProfileImage() {
+            const preview = document.getElementById('profileImagePreview');
+            preview.innerHTML = '<i class="fas fa-user text-2xl text-white/60"></i>';
+            document.getElementById('profileImageInput').value = '';
+            profileData.profileImage = '';
+            updateHeroProfileImage();
+            localStorage.removeItem('profileImage');
+        }
+
+        function updateHeroProfileImage() {
+            const heroImage = document.getElementById('heroProfileImage');
+            if (profileData.profileImage) {
+                heroImage.innerHTML = `<img src="${profileData.profileImage}" alt="Profile" class="w-full h-full object-cover rounded-full">`;
+            } else {
+                heroImage.innerHTML = '<i class="fas fa-user text-8xl text-gray-400 flex items-center justify-center h-full"></i>';
+            }
+        }
+
+        function previewPortfolioImage(input) {
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const preview = document.getElementById('portfolioImagePreview');
+                    preview.innerHTML = `<img src="${e.target.result}" alt="Portfolio" class="w-full h-full object-cover rounded-xl">`;
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        function removePortfolioImage() {
+            const preview = document.getElementById('portfolioImagePreview');
+            preview.innerHTML = '<i class="fas fa-image text-2xl text-white/60"></i>';
+            document.getElementById('portfolioImageInput').value = '';
+        }
+
+        // Admin functions
+        function showAdminLogin() {
+            document.getElementById('adminLoginModal').classList.remove('hidden');
+        }
+
+        function hideAdminLogin() {
+            document.getElementById('adminLoginModal').classList.add('hidden');
+        }
+
+        function adminLogin(event) {
+            event.preventDefault();
+            const username = document.getElementById('adminUsername').value;
+            const password = document.getElementById('adminPassword').value;
+            
+            if (username === 'admin' && password === 'admin123') {
+                hideAdminLogin();
+                showAdminPanel();
+                loadAdminData();
+            } else {
+                alert('Username atau password salah!');
+            }
+        }
+
+        function showAdminPanel() {
+            document.getElementById('adminPanel').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function hideAdminPanel() {
+            document.getElementById('adminPanel').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function adminLogout() {
+            // Clear admin form data
+            document.getElementById('adminUsername').value = '';
+            document.getElementById('adminPassword').value = '';
+            
+            // Hide admin panel and restore body scroll
+            document.getElementById('adminPanel').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+            
+            // Reset admin panel to default state
+            showAdminSection('profile');
+        }
+
+        function showAdminSection(section) {
+            document.querySelectorAll('.admin-section').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('.admin-tab').forEach(el => {
+                el.classList.remove('border-b-2', 'bg-purple-500/10', 'bg-blue-500/10', 'bg-green-500/10', 'bg-pink-500/10');
+                el.classList.remove('border-purple-400', 'border-blue-400', 'border-green-400', 'border-pink-400');
+            });
+            
+            document.getElementById('admin' + section.charAt(0).toUpperCase() + section.slice(1)).classList.remove('hidden');
+            
+            // Add active styles based on section
+            const activeTab = event.target;
+            activeTab.classList.add('border-b-2');
+            
+            if (section === 'profile') {
+                activeTab.classList.add('border-purple-400', 'bg-purple-500/10');
+            } else if (section === 'portfolio') {
+                activeTab.classList.add('border-blue-400', 'bg-blue-500/10');
+            } else if (section === 'skills') {
+                activeTab.classList.add('border-green-400', 'bg-green-500/10');
+            } else if (section === 'contact') {
+                activeTab.classList.add('border-pink-400', 'bg-pink-500/10');
+            }
+        }
+
+        function loadAdminData() {
+            document.getElementById('editName').value = profileData.name;
+            document.getElementById('editTitle').value = profileData.title;
+            document.getElementById('editHeroDescription').value = profileData.heroDescription;
+            document.getElementById('editAboutTitle').value = profileData.aboutTitle;
+            document.getElementById('editAboutDescription').value = profileData.aboutDescription;
+            document.getElementById('editEmail').value = profileData.email;
+            document.getElementById('editLocation').value = profileData.location;
+            document.getElementById('editPortfolioDrive').value = profileData.portfolioDrive;
+
+            const preview = document.getElementById('profileImagePreview');
+            if (profileData.profileImage) {
+                preview.innerHTML = `<img src="${profileData.profileImage}" alt="Profile" class="w-full h-full object-cover rounded-full">`;
+            } else {
+                const storedImage = localStorage.getItem('profileImage');
+                if (storedImage) {
+                    profileData.profileImage = storedImage;
+                    preview.innerHTML = `<img src="${storedImage}" alt="Profile" class="w-full h-full object-cover rounded-full">`;
+                } else {
+                    preview.innerHTML = '<i class="fas fa-user text-2xl text-white/60"></i>';
+                }
+            }
+
+            document.getElementById('editContactEmail').value = contactData.email;
+            document.getElementById('editContactPhone').value = contactData.phone;
+            document.getElementById('editContactAddress').value = contactData.address;
+            document.getElementById('editLinkedin').value = contactData.linkedin;
+            document.getElementById('editGithub').value = contactData.github;
+            document.getElementById('editInstagram').value = contactData.instagram;
+
+            loadPortfolioAdmin();
+            loadSkillsAdmin();
+        }
+
+        // Profile functions
+        function saveProfile() {
+            profileData.name = document.getElementById('editName').value;
+            profileData.title = document.getElementById('editTitle').value;
+            profileData.heroDescription = document.getElementById('editHeroDescription').value;
+            profileData.aboutTitle = document.getElementById('editAboutTitle').value;
+            profileData.aboutDescription = document.getElementById('editAboutDescription').value;
+            profileData.email = document.getElementById('editEmail').value;
+            profileData.location = document.getElementById('editLocation').value;
+            profileData.portfolioDrive = document.getElementById('editPortfolioDrive').value;
+
+            // Save to localStorage immediately
+            localStorage.setItem('profileData', JSON.stringify(profileData));
+            
+            if (profileData.profileImage) {
+                localStorage.setItem('profileImage', profileData.profileImage);
+            }
+
+            // Update the display immediately
+            loadProfile();
+            
+            // Force save all data to ensure persistence
+            saveAllDataToStorage();
+            
+            alert('Profil berhasil disimpan dan akan tetap tersimpan!');
+        }
+
+        function loadProfile() {
+            document.getElementById('heroName').textContent = profileData.name;
+            document.getElementById('heroTitle').textContent = profileData.title;
+            document.getElementById('heroDescription').textContent = profileData.heroDescription;
+            document.getElementById('aboutTitle').textContent = profileData.aboutTitle;
+            document.getElementById('aboutDescription').textContent = profileData.aboutDescription;
+            document.getElementById('aboutEmail').textContent = profileData.email;
+            document.getElementById('aboutLocation').textContent = profileData.location;
+
+            const heroImage = document.getElementById('heroProfileImage');
+            if (profileData.profileImage) {
+                heroImage.innerHTML = `<img src="${profileData.profileImage}" alt="Profile" class="w-full h-full object-cover rounded-full">`;
+            } else {
+                heroImage.innerHTML = '<i class="fas fa-user text-8xl text-gray-400 flex items-center justify-center h-full"></i>';
+            }
+
+            const driveLink = document.querySelector('a[href*="drive.google.com"]');
+            if (driveLink && profileData.portfolioDrive) {
+                driveLink.href = profileData.portfolioDrive;
+            }
+        }
+
+        // Contact functions
+        function saveContact() {
+            contactData.email = document.getElementById('editContactEmail').value;
+            contactData.phone = document.getElementById('editContactPhone').value;
+            contactData.address = document.getElementById('editContactAddress').value;
+            contactData.linkedin = document.getElementById('editLinkedin').value;
+            contactData.github = document.getElementById('editGithub').value;
+            contactData.instagram = document.getElementById('editInstagram').value;
+
+            // Save to localStorage immediately
+            localStorage.setItem('contactData', JSON.stringify(contactData));
+
+            // Update the display immediately
+            loadContact();
+            
+            // Force save all data to ensure persistence
+            saveAllDataToStorage();
+
+            alert('Informasi kontak berhasil disimpan dan akan tetap tersimpan!');
+        }
+
+        function loadContact() {
+            const contactInfo = document.getElementById('contactInfo');
+            contactInfo.innerHTML = `
+                <div class="flex items-center glass-dark p-4 rounded-xl hover-lift">
+                    <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-envelope text-white"></i>
+                    </div>
+                    <span class="text-gray-700">${contactData.email}</span>
+                </div>
+                <div class="flex items-center glass-dark p-4 rounded-xl hover-lift">
+                    <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-phone text-white"></i>
+                    </div>
+                    <span class="text-gray-700">${contactData.phone}</span>
+                </div>
+                <div class="flex items-center glass-dark p-4 rounded-xl hover-lift">
+                    <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-map-marker-alt text-white"></i>
+                    </div>
+                    <span class="text-gray-700">${contactData.address}</span>
+                </div>
+            `;
+
+            // Update social media links
+            const socialLinks = document.querySelectorAll('.flex.space-x-4 a');
+            if (socialLinks.length >= 3) {
+                socialLinks[0].href = contactData.linkedin || '#';
+                socialLinks[1].href = contactData.github || '#';
+                socialLinks[2].href = contactData.instagram || '#';
+            }
+        }
+
+        // Portfolio functions
+        function loadPortfolio() {
+            const container = document.getElementById('portfolioContainer');
+            
+            container.innerHTML = portfolioData.map((item, index) => `
+                <div class="portfolio-card glass rounded-3xl overflow-hidden hover-lift scale-in delay-${(index + 1) * 200} group relative">
+                    <div class="absolute inset-0 bg-gradient-to-br from-purple-600/20 via-blue-600/20 to-pink-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
+                    <div class="h-72 ${item.image ? '' : 'bg-gradient-to-br from-purple-500 via-blue-500 to-pink-500'} flex items-center justify-center overflow-hidden relative">
+                        ${item.image ? 
+                            `<img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">` :
+                            '<i class="fas fa-laptop-code text-9xl text-white/80 float group-hover:scale-110 transition-transform duration-500"></i>'
+                        }
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="portfolio-content p-8 relative z-10">
+                        <div class="flex justify-between items-start mb-6">
+                            <h3 class="text-2xl font-bold text-gray-800 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-600 group-hover:to-blue-600 transition-all duration-300">${item.name}</h3>
+                            <span class="text-sm neon-border px-4 py-2 rounded-full font-bold text-gray-800 bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-sm">${item.category}</span>
+                        </div>
+                        <p class="text-gray-700 mb-8 leading-relaxed text-lg">${item.description}</p>
+                        ${item.url ? `<a href="${item.url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center glass neon-border px-6 py-3 rounded-full font-bold transition-all hover-lift group-hover:scale-105">
+                            <span class="gradient-text">Lihat Project</span>
+                            <i class="fas fa-arrow-right ml-3 group-hover:translate-x-2 transition-transform duration-300"></i>
+                        </a>` : `<div class="inline-flex items-center glass neon-border px-6 py-3 rounded-full font-bold opacity-60">
+                            <span class="text-gray-600">Coming Soon</span>
+                            <i class="fas fa-clock ml-3"></i>
+                        </div>`}
+                    </div>
+                    <div class="absolute top-4 right-4 w-3 h-3 bg-gradient-to-r from-green-400 to-blue-400 rounded-full animate-pulse"></div>
+                </div>
+            `).join('');
+        }
+
+        function loadPortfolioAdmin() {
+            const container = document.getElementById('portfolioList');
+            container.innerHTML = portfolioData.map(item => `
+                <div class="glass p-6 rounded-2xl flex justify-between items-center hover-lift">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-16 h-16 ${item.image ? '' : 'bg-gradient-to-br from-purple-500 to-blue-500'} rounded-xl flex items-center justify-center overflow-hidden">
+                            ${item.image ? 
+                                `<img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover">` :
+                                '<i class="fas fa-image text-white/60"></i>'
+                            }
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-black text-lg">${item.name}</h4>
+                            <p class="text-black">${item.category}</p>
+                        </div>
+                    </div>
+                    <div class="space-x-3">
+                        <button onclick="editPortfolio(${item.id})" class="text-blue-500 hover:text-blue-400 hover:bg-blue-100 text-xl transition-all duration-200 p-2 rounded-lg">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button onclick="deletePortfolio(${item.id})" class="text-red-500 hover:text-red-400 hover:bg-red-100 text-xl transition-all duration-200 p-2 rounded-lg">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function showAddPortfolio() {
+            document.getElementById('portfolioModalTitle').textContent = 'Tambah Project';
+            document.getElementById('portfolioId').value = '';
+            document.getElementById('portfolioName').value = '';
+            document.getElementById('portfolioCategory').value = '';
+            document.getElementById('portfolioDescription').value = '';
+            document.getElementById('portfolioUrl').value = '';
+            document.getElementById('portfolioImageInput').value = '';
+            document.getElementById('portfolioImagePreview').innerHTML = '<i class="fas fa-image text-2xl text-white/60"></i>';
+            document.getElementById('portfolioModal').classList.remove('hidden');
+        }
+
+        function editPortfolio(id) {
+            const item = portfolioData.find(p => p.id === id);
+            if (item) {
+                document.getElementById('portfolioModalTitle').textContent = 'Edit Project';
+                document.getElementById('portfolioId').value = item.id;
+                document.getElementById('portfolioName').value = item.name;
+                document.getElementById('portfolioCategory').value = item.category;
+                document.getElementById('portfolioDescription').value = item.description;
+                document.getElementById('portfolioUrl').value = item.url;
+                
+                const preview = document.getElementById('portfolioImagePreview');
+                if (item.image) {
+                    preview.innerHTML = `<img src="${item.image}" alt="Portfolio" class="w-full h-full object-cover rounded-xl">`;
+                } else {
+                    preview.innerHTML = '<i class="fas fa-image text-2xl text-white/60"></i>';
+                }
+                
+                document.getElementById('portfolioModal').classList.remove('hidden');
+            }
+        }
+
+        function deletePortfolio(id) {
+            // Konfirmasi penghapusan
+            if (confirm('Apakah Anda yakin ingin menghapus project ini?')) {
+                // Hapus dari array
+                portfolioData = portfolioData.filter(p => p.id !== id);
+                
+                // Simpan ke localStorage
+                localStorage.setItem('portfolioData', JSON.stringify(portfolioData));
+                
+                // Refresh tampilan
+                loadPortfolio();
+                loadPortfolioAdmin();
+                
+                // Notifikasi berhasil
+                alert('Project berhasil dihapus!');
+            }
+        }
+
+        function savePortfolioItem(event) {
+            event.preventDefault();
+            const id = document.getElementById('portfolioId').value;
+            const name = document.getElementById('portfolioName').value;
+            const category = document.getElementById('portfolioCategory').value;
+            const description = document.getElementById('portfolioDescription').value;
+            const url = document.getElementById('portfolioUrl').value;
+            
+            const preview = document.getElementById('portfolioImagePreview');
+            const img = preview.querySelector('img');
+            const image = img ? img.src : '';
+
+            if (id) {
+                const index = portfolioData.findIndex(p => p.id == id);
+                if (index !== -1) {
+                    portfolioData[index] = { id: parseInt(id), name, category, description, url, image };
+                }
+            } else {
+                const newId = Math.max(...portfolioData.map(p => p.id), 0) + 1;
+                portfolioData.push({ id: newId, name, category, description, url, image });
+            }
+
+            // Save to localStorage immediately
+            localStorage.setItem('portfolioData', JSON.stringify(portfolioData));
+
+            // Update displays immediately
+            loadPortfolio();
+            loadPortfolioAdmin();
+            
+            // Force save all data to ensure persistence
+            saveAllDataToStorage();
+            
+            hidePortfolioModal();
+            alert('Portfolio berhasil disimpan dan akan tetap tersimpan!');
+        }
+
+        function hidePortfolioModal() {
+            document.getElementById('portfolioModal').classList.add('hidden');
+        }
+
+        // Skills functions
+        function loadSkills() {
+            const container = document.getElementById('skillsContainer');
+            container.innerHTML = skillsData.map(skill => `
+                <div class="glass p-6 rounded-2xl text-center skill-card hover-lift fade-in delay-${skill.id * 100 + 400}">
+                    <i class="${skill.icon} text-4xl text-purple-500 mb-4 float"></i>
+                    <h4 class="font-semibold text-gray-800 mb-2">${skill.name}</h4>
+                    <p class="text-gray-700 text-sm">${skill.description}</p>
+                </div>
+            `).join('');
+        }
+
+        function loadSkillsAdmin() {
+            const container = document.getElementById('skillsList');
+            container.innerHTML = skillsData.map(skill => `
+                <div class="glass p-6 rounded-2xl hover-lift">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="flex items-center">
+                            <i class="${skill.icon} text-2xl text-purple-400 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold text-black">${skill.name}</h4>
+                                <p class="text-black text-sm">${skill.description}</p>
+                            </div>
+                        </div>
+                        <div class="space-x-3">
+                            <button onclick="editSkill(${skill.id})" class="text-blue-500 hover:text-blue-400 hover:bg-blue-100 text-xl transition-all duration-200 p-2 rounded-lg">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button onclick="deleteSkill(${skill.id})" class="text-red-500 hover:text-red-400 hover:bg-red-100 text-xl transition-all duration-200 p-2 rounded-lg">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function showAddSkill() {
+            document.getElementById('skillModalTitle').textContent = 'Tambah Skill';
+            document.getElementById('skillId').value = '';
+            document.getElementById('skillName').value = '';
+            document.getElementById('skillDescription').value = '';
+            document.getElementById('skillIcon').value = '';
+            document.getElementById('skillModal').classList.remove('hidden');
+        }
+
+        function editSkill(id) {
+            const skill = skillsData.find(s => s.id === id);
+            if (skill) {
+                document.getElementById('skillModalTitle').textContent = 'Edit Skill';
+                document.getElementById('skillId').value = skill.id;
+                document.getElementById('skillName').value = skill.name;
+                document.getElementById('skillDescription').value = skill.description;
+                document.getElementById('skillIcon').value = skill.icon;
+                document.getElementById('skillModal').classList.remove('hidden');
+            }
+        }
+
+        function deleteSkill(id) {
+            if (confirm('Apakah Anda yakin ingin menghapus skill ini?')) {
+                skillsData = skillsData.filter(s => s.id !== id);
+                localStorage.setItem('skillsData', JSON.stringify(skillsData));
+                loadSkills();
+                loadSkillsAdmin();
+                alert('Skill berhasil dihapus!');
+            }
+        }
+
+        function saveSkill(event) {
+            event.preventDefault();
+            const id = document.getElementById('skillId').value;
+            const name = document.getElementById('skillName').value;
+            const description = document.getElementById('skillDescription').value;
+            const icon = document.getElementById('skillIcon').value;
+
+            if (id) {
+                const index = skillsData.findIndex(s => s.id == id);
+                if (index !== -1) {
+                    skillsData[index] = { id: parseInt(id), name, description, icon };
+                }
+            } else {
+                const newId = Math.max(...skillsData.map(s => s.id), 0) + 1;
+                skillsData.push({ id: newId, name, description, icon });
+            }
+
+            // Save to localStorage immediately
+            localStorage.setItem('skillsData', JSON.stringify(skillsData));
+
+            // Update displays immediately
+            loadSkills();
+            loadSkillsAdmin();
+            
+            // Force save all data to ensure persistence
+            saveAllDataToStorage();
+            
+            hideSkillModal();
+            alert('Skill berhasil disimpan dan akan tetap tersimpan!');
+        }
+
+        function hideSkillModal() {
+            document.getElementById('skillModal').classList.add('hidden');
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'983ee9dd66a55d17',t:'MTc1ODY4MTU4OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
